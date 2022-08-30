@@ -1,72 +1,95 @@
-//array of choices
-const choices = ["rock", "paper", "scissors"];
+// array of choices
 
-//this is the function to sart the game
-function play(){
-    playRound();
-}
+// const rock = document.querySelector('#rock');
+// const paper = document.querySelector('#paper');
+// const scissors = document.querySelector('#scissors');
 
-function playRound(){
+ 
 
-    const playerSelection = getPlayerChoice();
-    const computerSelection = getComputerChoice();
+// const buttons = document.querySelectorAll('button');
 
-    console.log("player: " +playerSelection);
-    console.log("computer: " +computerSelection);
-    const winner = verifyWinner(playerSelection,computerSelection); 
-    console.log(winner);
+// buttons.forEach((button) => {
+//     button.addEventListener('clcik', () => {
+//         alert(button.id);
+//     });
+// });
+
+// //this is the function to sart the game
+// function play(){
+       
+    
    
-}
- // To verify the player choice
-function getPlayerChoice(){
-   let playerEntry = prompt("Enter rock or paper or scissors");
-   playerEntry = playerEntry.trim();
+// }
 
-   while(playerEntry.length === 0){
-        playerEntry = prompt("Enter rock or paper or scissors");
-   }
+// function playRound(){
 
-   playerEntry = playerEntry.toLowerCase();
-   let verifyP = validateChoice(playerEntry);  
+//     const playerSelection = getPlayerChoice();
+//     const computerSelection = getComputerChoice();
+    
+//     const winner = verifyWinner(playerSelection,computerSelection); 
+//     console.log(winner);
+    
 
-    while(verifyP === false){
-        playerEntry = prompt("Enter the correct word: rock or paper or scissors");
+//     console.log("player: " +playerSelection);
+//     console.log("computer: " +computerSelection);
+    
+   
+// }
+//  // To verify the player choice
+// function getPlayerChoice(){
 
-        playerEntry = playerEntry.trim();
-        playerEntry = playerEntry.toLowerCase();
-        verifyP = validateChoice(playerEntry);
+
+
+// //    let playerEntry = prompt("Enter rock or paper or scissors");
+// //    playerEntry = playerEntry.trim();
+
+// //    while(playerEntry.length === 0){
+// //         playerEntry = prompt("Enter rock or paper or scissors");
+// //    }
+
+// //    playerEntry = playerEntry.toLowerCase();
+// //    let verifyP = validateChoice(playerEntry);  
+
+// //     while(verifyP === false){
+// //         playerEntry = prompt("Enter the correct word: rock or paper or scissors");
+
+// //         playerEntry = playerEntry.trim();
+// //         playerEntry = playerEntry.toLowerCase();
+// //         verifyP = validateChoice(playerEntry);
         
-    } 
+// //     } 
     
-    return playerEntry;
+// //     return playerEntry;
   
-}
+// }
 
-//tTo verify the computer choice
-function getComputerChoice(){  
+// //tTo verify the computer choice
+// function getComputerChoice(){  
 
-    const random = Math.floor(Math.random() * choices.length);
-    return(random, choices[random]);
+//     const random = Math.floor(Math.random() * choices.length);
+//     return(random, choices[random]);
     
-}
-//To verify the entry of the player
-function validateChoice(ch){
-    return choices.includes(ch);
-}
- //To verify wich win
-function verifyWinner(pc, cc){
-    if(pc === cc){
-        return "The game is hard";
-    }
-    else if((pc === "rock" && cc ==="scissors") ||
-    (pc === "paper" && cc === "rock") ||
-    (pc === "scissors" && cc === "paper")){
-        return "Player won";
-    }
-    else{
-        return "Computer won";
-    }
-}
+// }
+// //To verify the entry of the player
+// function validateChoice(ch){
+//     return choices.includes(ch);
+// }
+//  //To verify wich win
+// function verifyWinner(pc, cc){
+//     if(pc === cc){
+//         return "The game is hard";
+//     }
+//     else if((pc === "rock" && cc ==="scissors") ||
+//     (pc === "paper" && cc === "rock") ||
+//     (pc === "scissors" && cc === "paper")){
+//         return "Player won";
+//     }
+//     else{
+//         return "Computer won";
+//     }
+// }
 
-play();
+
+
+// play();
 

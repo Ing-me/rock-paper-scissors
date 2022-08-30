@@ -5,9 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   <script src="js/rock.js"></script>
+    <link rel="stylesheet" href="css/rock.css">
+
+   <script src="js/rock.js" defer></script>
+   <script src="js/test.js" defer></script>
 </head>
-<body>
-    
+<body onload="myFunction()">
+    <div class="fluid-container">
+        <div class="container">
+            <h1>Rock-Paper-Scissors game</h1> 
+            <h1 class="win" id="win"></h1>
+            <p>This game can play with one person and with the computer</p>
+            <div class="start-game">
+                <label id="resetGame" onclick="resetGame()">Replay</label>
+            </div>
+            <div class="selection">
+                <button id="rock">Rock</button>
+                <button id="paper">Paper</button>
+                <button id="scissors">Scissors</button>
+            </div>
+            <div id="choice">
+                <div id="cchoice">Computer choice:</div>
+                <div id="pchoice">Player choice:</div>            
+            </div>
+            <div id="score">
+                <div id="cscore">Computer score: 0</div>
+                <div id="pscore"> Player score: 0</div>
+                <div id="tie">Score: 0</div>
+            </div>
+            <div id="result">Winner</div>
+        </div>
+    </div>
 </body>
 </html>
